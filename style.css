@@ -217,6 +217,18 @@
 }
 
 
+#corfonte a {
+  color: #3498db; /* Cor do texto (azul suave) */
+  text-decoration: none; /* Remove sublinhado */
+  font-weight: bold; /* (opcional) Deixa o texto em negrito */
+  font-size: 18px; /* (opcional) Aumenta o tamanho da fonte */
+}
+
+#corfonte a:hover {
+  color: #1d6fa5; /* Cor ao passar o mouse */
+  text-decoration: dashed; /* (opcional) Adiciona sublinhado ao passar o mouse */
+}
+
 
 
 
