@@ -15,52 +15,7 @@
     <p id="redirectText"></p>
   </div>
 </div>
-
-  <script src="script.js"></script>
-
-
-  
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-
-  const form = document.querySelector(".search-form");
-  const input = form.querySelector("input");
-  const message = document.getElementById("redirectMessage");
-  const text = document.getElementById("redirectText");
-
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    let game = input.value.trim();
-    if (!game) return;
-
-    let firstChar = game.charAt(0).toUpperCase();
-    let url;
-
-    if (!isNaN(firstChar)) {
-      url = "https://vimm.net/vault/?p=list&system=PS2&section=number";
-      text.innerText = "Redirecionando para jogos que começam com número...";
-    } 
-    else if (/^[A-Z]$/.test(firstChar)) {
-      url = "https://vimm.net/vault/PS2/" + firstChar;
-      text.innerText = `Redirecionando para jogos com a letra ${firstChar}...`;
-    } 
-    else {
-      return;
-    }
-
-    message.classList.add("show");
-
-    setTimeout(() => {
-      window.location.href = url;
-    }, 2000);
-
-  });
-
-});
-</script>
-
-  
+    
   <header>
     <h1>Evolução dos Video Games</h1>
   </header>
@@ -84,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
   </nav>
 
   <main>
-    <section id="anos80">
+    <section id="anos80" class="reveal">
       <h2>Anos 80</h2>
       <p><b>Atari 2600 (1977, mas dominou os anos 80)</b></p>
       <li>Fabricante: Atari</li>
@@ -109,10 +64,10 @@ document.addEventListener("DOMContentLoaded", function() {
       <p>Sega Genesis (Mega Drive) (1988 no Japão, 1989 nos EUA)</p>
       <li>Fabricante: Sega</li>
       <li>estaques: Começou a era 16-bit com Sonic the Hedgehog e Street Fighter II.</li>
-      
+      </section>
     </section>
 
-    <section id="anos90">
+    <section id="anos90" class="reveal">
       <h2>Anos 90</h2>
       <p>Super Nintendo (SNES)</p>
       <li>Fabricante: Nintendo</li>
@@ -129,7 +84,7 @@ Jogos icônicos como Super Mario World, The Legend of Zelda: A Link to the Past,
        <li>Marcou o início da Sony no mercado de games, superando a Nintendo e Sega na era 32-bit.</li>
     </section>
 
-    <section id="anos2000">
+   <section id="anos2000" class="reveal">
       <h2>Anos 2000</h2>
       <P>A sexta geração de consoles (2000-2006) marcou uma evolução radical nos gráficos 3D, jogabilidade e recursos multimídia. O PlayStation 2 (PS2), Xbox e Nintendo GameCube trouxeram experiências únicas, cada um com sua abordagem.</P>
       <li>PlayStation 2 (PS2) – O Console Mais Vendido da História</li>
@@ -165,10 +120,8 @@ Jogos icônicos como Super Mario World, The Legend of Zelda: A Link to the Past,
       <li>Fable (RPG com escolhas morais).</li>
       <li>Forza Motorsport (concorrente direto do Gran Turismo).</li>
       <li>📊 Legado: Apesar de vender 24 milhões de unidades, lançou as bases para o Xbox 360.</li>
-
-
     </section>
-    <section id="ps2">
+    <section id="ps2" class="reveal">
       <h2>PlayStation 2</h2>
       <p>O console mais vendido da história, lançado em 2000, marcou uma geração com títulos lendários.</p>
 
@@ -229,7 +182,8 @@ Jogos icônicos como Super Mario World, The Legend of Zelda: A Link to the Past,
         <li><strong>Persona 4</strong> (2008)</li>
         <li><strong>Guitar Hero II</strong> (2006)</li>
         <li><strong>Bully</strong> (2006)</li>  
-     <section id="MelhoresGames">
+
+    <section id="MelhoresGames" class="reveal">
   <h2>Jogos Para Download</h2>
 
   <div class="galeria">
@@ -290,7 +244,7 @@ Jogos icônicos como Super Mario World, The Legend of Zelda: A Link to the Past,
   </section>
      </section>
      
-    <section id="Tutorial de como instalar">
+ <section id="Tutorial de como instalar" class="reveal"></section>
       <h2>TUTORIAL DE COMO INSTALAR O PCSX2</h2>
       <div class="video-wrapper"> 
         <iframe id="video" src="https://www.youtube.com/embed/VFQ45FeXVT8?si=K_RbtOdbHUt_CBCT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -304,7 +258,7 @@ Jogos icônicos como Super Mario World, The Legend of Zelda: A Link to the Past,
 <footer style="text-align: center; margin-top: 20px; padding: 10px; background-color: #000000; color: rgb(255, 255, 255);">
   &copy; Jhonatan Romero 
 
-  <a href="https://github.com/Jhondev-404 target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
+  <a href="https://github.com/JhonatanRomero-Dev" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">
   <img src="https://img.icons8.com/?size=100&id=bVGqATNwfhYq&format=png&color=000000" alt="LinkedIn" width="30" style="vertical-align: middle;"> 
   <span style="vertical-align: middle; color: rgb(255, 255, 255);">Github</span>
   
@@ -318,9 +272,8 @@ Jogos icônicos como Super Mario World, The Legend of Zelda: A Link to the Past,
 
 </footer>
 
+  <script src="script.js"></script>
   
-    </a>
-  </footer>
 </body>
 </html>
 

@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+
 /* ================= VARIÁVEIS ================= */
 :root {
   --cor1:#0026ff;
@@ -52,6 +53,9 @@ header h1 {
   position: relative;
   animation: glow 2s infinite alternate;
 }
+
+
+
 
 @keyframes glow {
   from {
@@ -283,4 +287,17 @@ footer {
   100% {
     transform: rotate(360deg);
   }
+} 
+
+/* Scroll Reveal Base */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Quando aparece */
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
