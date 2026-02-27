@@ -8,17 +8,79 @@
       <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<div id="redirectMessage" class="redirect-message">
+  <div class="redirect-box">
+    <div class="spinner"></div>
+    <p id="redirectText"></p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+
+
+  
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+  const form = document.querySelector(".search-form");
+  const input = form.querySelector("input");
+  const message = document.getElementById("redirectMessage");
+  const text = document.getElementById("redirectText");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    let game = input.value.trim();
+    if (!game) return;
+
+    let firstChar = game.charAt(0).toUpperCase();
+    let url;
+
+    if (!isNaN(firstChar)) {
+      url = "https://vimm.net/vault/?p=list&system=PS2&section=number";
+      text.innerText = "Redirecionando para jogos que começam com número...";
+    } 
+    else if (/^[A-Z]$/.test(firstChar)) {
+      url = "https://vimm.net/vault/PS2/" + firstChar;
+      text.innerText = `Redirecionando para jogos com a letra ${firstChar}...`;
+    } 
+    else {
+      return;
+    }
+
+    message.classList.add("show");
+
+    setTimeout(() => {
+      window.location.href = url;
+    }, 2000);
+
+  });
+
+});
+</script>
+
+  
   <header>
     <h1>Evolução dos Video Games</h1>
   </header>
 
   <nav>
+
     <a href="#anos80">Anos 80</a>
     <a href="#anos90">Anos 90</a>
     <a href="#anos2000">Anos 2000</a>
     <a href="#ps2">PlayStation 2</a>
     <a href="#MelhoresGames" >Jogos Nostalgicos para PS2</a>
     <a href="#Tutorial de como instalar"> Como Instalar o Emulador De PS2 para PC</a>
+    
+    
+   <form class="search-form">
+  <input type="text" id="searchInput" placeholder="Pesquisar jogo..." />
+  <button type="submit">🔍</button>
+</form>
+  
+  </form>
   </nav>
 
   <main>

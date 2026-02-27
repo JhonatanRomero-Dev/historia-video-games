@@ -1,92 +1,132 @@
-    @charset  "UTF-8";  
-     
-     
-     body{ 
+@charset "UTF-8";
+
+/* ================= RESET PROFISSIONAL ================= */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= VARIÁVEIS ================= */
+:root {
+  --cor1:#0026ff;
+  --cor2:#202040;
+  --cor3:#200cd3be;
+  --cor4:#200cd3b7;
+  --cor5:#200cd3;
+  --cor6:#66CCFF;
+  --cor7:#E6E6E6;
+  --cor8:#1a1a2e;
+  --cor9:#0072CE55;
+  --cor10:#007b75;
+}
+
+/* ================= BODY ================= */
+body {
   background: url(img/planodefundo.jpg) no-repeat center center fixed;
   background-size: cover;
-  color: #E6E6E6;
+  color: var(--cor7);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-    }
- 
+/* ================= HEADER ================= */
+header {
+  text-align: center;
+  font-size: larger;
+}
 
+header h1 {
+  font-family: 'Press Start 2P', cursive, Arial, sans-serif;
+  color: #0606f1;
+  text-shadow: 
+    0 0 5px #0026ff, 
+    0 0 10px #0026ff,
+    0 0 20px #0026ff;
+  background: linear-gradient(90deg, #1a1a1a 0%, #370cd3a8 50%, #1a1a1a 100%);
+  padding: 30px;
+  border: 2px solid #1d06ee; 
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 30px auto;
+  max-width: 80%;
+  position: relative;
+  animation: glow 2s infinite alternate;
+}
 
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px #200cd3be;
+  }
+  to {
+    box-shadow: 0 0 20px #200cd3b7, 0 0 30px #200cd3;
+  }
+}
 
-       header {
-      padding: 0%;
-      text-align: center;
-      
-      font-size: larger;
-    }
+/* ================= NAVBAR ================= */
+nav {
+  display: flex;
+  align-items: center;
+  background-color: #1010207c;
+  padding: 15px 30px;
+}
 
-    header h1 {
-        font-family: 'Press Start 2P', cursive, Arial, sans-serif;
-          color: #0606f1;
-           text-shadow: 
-            0 0 5px #0026ff, 
-            0 0 10px #0026ff,
-            0 0 20px #0026ff,;
-          background: linear-gradient(90deg, #1a1a1a 0%, #370cd3a8 50%, #1a1a1a 100%);
-           padding: 30px;
-        border: 2px solid #1d06ee; 
-        
-        text-align: center;
-        letter-spacing: 2px;
-        margin: 30px auto;
-        max-width: 80%;
-        position: relative;
-        animation: glow 2s infinite alternate;
-    }
+nav a {
+  color: var(--cor6);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  font-size: large;
+}
 
-    @keyframes glow {   from {
-            box-shadow: 0 0 5px #200cd3be;
-        }
-        to {
-            box-shadow: 0 0 20px #200cd3b7, 0 0 30px #200cd3;
-        }
-    }
-        
+nav a:hover {
+  color: var(--cor7);
+}
 
-    nav {
-      background-color: #1010207c;
-      padding: 10px;
-      text-align: center;
-      
-    }
+/* ================= SEARCH ================= */
+.search-form {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
 
-    nav a {
-      color: #66CCFF;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      font-size: large;
-    }
+.search-form input {
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  background-color: #222;
+  color: white;
+  border-radius: 20px 0 0 20px;
+}
 
-    nav a:hover {
-      color: #E6E6E6;
-    }
+.search-form button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #1a1a2e;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+}
 
-    main {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+/* ================= MAIN ================= */
+main {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    section {
-      margin-bottom: 40px;
-      padding: 20px;
-      background-color: #1a1a2e;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #0072CE55;
-    }
+section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: var(--cor8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--cor9);
+}
 
-    h2 {
-      color: #66CCFF;
-    }
+h2 {
+  color: var(--cor6);
+}
 
-
-    .galeria {
+/* ================= GALERIA ================= */
+.galeria {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
@@ -94,15 +134,12 @@
   padding: 0 11px;
 }
 
-
-
-
 .jogo {
   text-align: center;
-  background-color: #1a1a2e;
+  background-color: var(--cor8);
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 0 10px #0072CE55;
+  box-shadow: 0 0 10px var(--cor9);
 }
 
 .jogo img {
@@ -117,48 +154,25 @@
   font-weight: bold;
   font-size: 16px;
 }
-  
-  
-         
 
-       p{
-        text-decoration: underline;
-        font-weight: bold;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-       }   
+/* ================= TIPOGRAFIA ================= */
+p {
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
-       ul{
-          font-weight: bold;
-          text-decoration: solid;
-       }
-       
-       li{
-        font-style: italic;
-       }
+ul {
+  font-weight: bold;
+}
 
-      
+li {
+  font-style: italic;
+}
 
-   /* footer {
-      background-color: #000000;
-      text-align: center;
-      padding: 15px;
-      font-size: 0.9em;
-      color: #E6E6E6;
-    } */
-
-
-
-       footer {
-      margin-top: 60px;
-      text-align: center;
-      padding: 20px;
-      background-color: #000;
-      color: #888;
-      font-size: 14px;
-    }
-
-
-    .botao-download {
+/* ================= BOTÃO DOWNLOAD ================= */
+.botao-download {
   display: inline-block;
   margin-top: 10px;
   padding: 10px 20px;
@@ -174,29 +188,7 @@
   background-color: #ff0000;
 }
 
-* {
-  margin:0px;
-  padding:5px;
-}
-
-
-
-
-
-:root{
-    --cor1:#0026ff;
-    --cor2:#202040;
-    --cor3:#200cd3be;
-    --cor4:#200cd3b7;
-    --cor5:#200cd3;
-    --cor6:#66CCFF;
-    --cor7:#E6E6E6;
-    --cor8:#1a1a2e;
-    --cor9:#0072CE55;
-    --cor10:#007b75;
-    /*Serve como exemplo por aqui eu posso trocar as cores do site onde qualquer cor que esteje envolvida aqui eu altero no codigo também*/
-}       
-
+/* ================= VIDEO RESPONSIVO ================= */
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%; 
@@ -206,7 +198,7 @@
   max-width: 100%;
   margin: 20px auto;
   border-radius: 10px;
-  box-shadow: 0 0 10px #0072CE55;
+  box-shadow: 0 0 10px var(--cor9);
 }
 
 .video-wrapper iframe {
@@ -218,38 +210,77 @@
   border: none;
 }
 
-
+/* ================= LINKS PERSONALIZADOS ================= */
 #corfonte a {
-  color: #3498db; /* Cor do texto (azul suave) */
-  text-decoration: none; /* Remove sublinhado */
-  font-weight: bold; /* (opcional) Deixa o texto em negrito */
-  font-size: 18px; /* (opcional) Aumenta o tamanho da fonte */
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 #corfonte a:hover {
-  color: #1d6fa5; /* Cor ao passar o mouse */
-  text-decoration: dashed; /* (opcional) Adiciona sublinhado ao passar o mouse */
+  color: #1d6fa5;
 }
 
+/* ================= FOOTER ================= */
+footer {
+  margin-top: 60px;
+  text-align: center;
+  padding: 20px;
+  background-color: #000;
+  color: #888;
+  font-size: 14px;
+}
 
+/* ================= MENSAGEM REDIRECIONAMENTO ================= */
+.redirect-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  z-index: 9999;
+}
 
+.redirect-message.show {
+  opacity: 1;
+  visibility: visible;
+}
 
+.redirect-box {
+  background: #111;
+  padding: 30px 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 25px #00f2ff;
+  text-align: center;
+  color: #00f2ff;
+  transform: translateY(-30px);
+  transition: transform 0.5s ease;
+}
 
-/*  body{ margin: 0;
-      background: linear-gradient(to bottom, #000000, #202040);
-      color: #E6E6E6;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        (ESTE E UM PADRÃO QUE EU TINHA FEITO ANTES CASO EU QUERA VOLTAR COM ELE TIRANDO A IMAGEM DE FUNDO
-*/
+.redirect-message.show .redirect-box {
+  transform: translateY(0);
+}
 
+.spinner {
+  width: 35px;
+  height: 35px;
+  border: 4px solid #222;
+  border-top: 4px solid #00f2ff;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  animation: spin 1s linear infinite;
+}
 
-
-
-
-/* header {
-      background-color: #000000;
-      padding: 0%;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-      font-size: larger;
-        (ESSE TAMBÉM UM PADRÃO TOP  }*/
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
