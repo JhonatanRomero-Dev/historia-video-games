@@ -301,3 +301,52 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* ========================= */
+/* RESPONSIVO PARA MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    padding: 10px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  section {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  li {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  /* timeline */
+
+  .timeline {
+    padding: 20px 10px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .timeline-content {
+    padding: 15px;
+    font-size: 14px;
+  }
+
+}
