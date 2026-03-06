@@ -162,8 +162,9 @@ h2 {
 }
 
 .jogo img {
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 0 8px #000;
 }
@@ -410,3 +411,11 @@ max-width:220px;
 }
 
 }
+@media (max-width:768px){
+
+.jogo img{
+height:180px;
+}
+
+}
+
