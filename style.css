@@ -1,4 +1,9 @@
 @charset "UTF-8";
+img{
+max-width:100%;
+height:auto;
+display:block;
+}
 
 /* ================= RESET PROFISSIONAL ================= */
 * {
@@ -132,6 +137,7 @@ section {
   background-color: var(--cor8);
   border-radius: 10px;
   box-shadow: 0 0 10px var(--cor9);
+  overflow: hidden;
 }
 
 h2 {
@@ -390,4 +396,17 @@ margin-top:10px;
 .console-card:hover{
 transform:translateY(-10px);
 box-shadow:0 0 20px #1d06ee;
+}
+section img{
+width:100%;
+max-width:350px;
+margin:15px auto;
+border-radius:10px;
+}
+ @media (max-width:768px){
+
+section img{
+max-width:220px;
+}
+
 }
