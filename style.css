@@ -310,6 +310,16 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+/* ================= IMAGENS DOS CARDS ================= */
+
+.card img{
+width:100%;
+max-width:300px;
+height:auto;
+border-radius:10px;
+display:block;
+margin:10px auto;
+}
 /* ========================= */
 /* RESPONSIVO PARA MOBILE */
 /* ========================= */
@@ -373,4 +383,13 @@ margin-top:10px;
 .console-card:hover{
 transform:translateY(-10px);
 box-shadow:0 0 20px #1d06ee;
+}
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+.card img{
+max-width:200px;
+}
+
 }
