@@ -320,9 +320,16 @@ border-radius:10px;
 display:block;
 margin:10px auto;
 }
-/* ========================= */
-/* RESPONSIVO PARA MOBILE */
-/* ========================= */
+
+/* ================= MOBILE ================= */
+
+@media (max-width:768px){
+
+.card img{
+max-width:200px;
+}
+
+}
 
 /* ================= MOBILE ================= */
 
@@ -383,13 +390,4 @@ margin-top:10px;
 .console-card:hover{
 transform:translateY(-10px);
 box-shadow:0 0 20px #1d06ee;
-}
-/* ================= MOBILE ================= */
-
-@media (max-width:768px){
-
-.card img{
-max-width:200px;
-}
-
 }
